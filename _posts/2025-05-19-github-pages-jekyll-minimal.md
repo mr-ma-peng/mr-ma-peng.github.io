@@ -5,7 +5,9 @@ date: 2025-05-19
 tags: [GitHub Pages, Jekyll, minimal, 博客搭建]
 ---
 
-GitHub Pages 是一个免费托管静态网站的服务，配合 Jekyll 博客框架和官方提供的 `minimal` 主题，可以非常轻量地搭建个人博客。本文记录我的搭建过程和配置要点。
+GitHub Pages 是一个免费托管静态网站的服务，配合 Jekyll 博客框架和官方提供的 `minimal` 主题，可以非常轻量地搭建个人博客。
+
+本文记录我的搭建过程和配置要点。
 
 ---
 
@@ -13,8 +15,11 @@ GitHub Pages 是一个免费托管静态网站的服务，配合 Jekyll 博客�
 
 1. 创建一个公开仓库，命名为：`your-username.github.io`
 2. 进入仓库设置，启用 GitHub Pages：
-   - 选择部署分支为 `main`
-   - 根目录作为发布源
+   - Deploy from branch
+     - 选择部署分支为 `main`
+     - 根目录作为发布源
+   - GitHub Actions
+     - 配置 .github/workflows/xxxx.yml
 
 ---
 
@@ -28,3 +33,4 @@ description: 记录我的技术成长之路
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
   - jekyll-remote-theme
+```

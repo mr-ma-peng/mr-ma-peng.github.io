@@ -8,12 +8,15 @@ title: 欢迎来到我的 GitHub 主页
 欢迎访问我的 GitHub 主页！这里是我所有项目的入口，你可以通过下方链接快速了解我的工作、写作和实验项目。
 
 ---
-👉 [查看我的博客文章](/blog)
+## 📝 博客
+
+[链接](/blog)
+
 ---
 
-## 📝 算法 - `algorithm`
+## 📝 算法项目 - `algorithm`
 
-[进入算法页面](https://mr-ma-peng.github.io/algorithm)
+[链接](https://mr-ma-peng.github.io/algorithm)
 
 记录我的算法学习笔记。
 
