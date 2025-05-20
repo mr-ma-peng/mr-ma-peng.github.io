@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "使用 GitHub Pages + Jekyll + minimal 构建个人博客"
 date: 2025-05-19
 tags: [GitHub Pages, Jekyll, minimal, 博客搭建]
