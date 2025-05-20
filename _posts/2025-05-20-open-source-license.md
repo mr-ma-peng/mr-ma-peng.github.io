@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "如何选择 GitHub 开源许可证：MIT、Apache、GPL 等详解"
-date: 2025-05-21
+date: 2025-05-20
 tags: [GitHub, 开源许可证, MIT, Apache, GPL, LGPL]
 ---
 
