@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ '/resume/assets/resume.css' | relative_url }}">
+
+<div class="resume-toolbar" role="toolbar" aria-label="简历操作">
+  <a class="resume-back-link" href="{{ '/' | relative_url }}">首页</a>
+  <button type="button" class="resume-print-btn" onclick="window.print()">导出为 PDF（打印）</button>
+  <span class="resume-toolbar-hint">使用浏览器打印对话框，目标选「储存为 PDF」即可。</span>
+</div>
+
+<article class="resume-document">
+{{ content }}
+</article>

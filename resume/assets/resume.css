@@ -1,0 +1,207 @@
+/**
+ * Résumé page: readable on screen, clean when printing / Save as PDF.
+ * Relies on :has(); all evergreen browsers supported on GitHub Pages.
+ */
+
+.resume-toolbar {
+  margin: 0 0 1.25rem;
+  padding: 0.75rem 1rem;
+  background: #f4f8fb;
+  border: 1px solid #dce7f2;
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 1rem;
+}
+
+.resume-print-btn {
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.45rem 0.9rem;
+  color: #fff;
+  background: #267cb9;
+  border: none;
+  border-radius: 4px;
+}
+
+.resume-print-btn:hover,
+.resume-print-btn:focus {
+  background: #1a5f8a;
+}
+
+.resume-toolbar-hint {
+  font-size: 0.8rem;
+  color: #5a6a78;
+  line-height: 1.4;
+}
+
+.resume-back-link {
+  font-size: 0.9rem;
+  color: #267cb9;
+}
+
+.resume-back-link:hover,
+.resume-back-link:focus {
+  font-weight: 600;
+}
+
+.resume-document {
+  color: #222;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  max-width: 52rem;
+}
+
+.resume-document h1 {
+  font-size: 1.75rem;
+  margin: 0 0 0.35rem;
+  letter-spacing: -0.02em;
+  border-bottom: 2px solid #222;
+  padding-bottom: 0.35rem;
+}
+
+.resume-document h2 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #333;
+  margin: 1.35rem 0 0.5rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.2rem;
+}
+
+.resume-document h3 {
+  font-size: 1rem;
+  color: #222;
+  margin: 0.85rem 0 0.25rem;
+}
+
+.resume-document h4 {
+  font-size: 0.92rem;
+  color: #444;
+  margin: 0.6rem 0 0.2rem;
+}
+
+.resume-document p,
+.resume-document ul,
+.resume-document ol {
+  margin: 0 0 0.65rem;
+}
+
+.resume-document ul,
+.resume-document ol {
+  padding-left: 1.25rem;
+}
+
+.resume-document li {
+  margin-bottom: 0.25rem;
+}
+
+.resume-document a {
+  color: #0b5cab;
+}
+
+.resume-document strong {
+  color: #111;
+}
+
+.resume-document hr {
+  margin: 1rem 0;
+  opacity: 0.7;
+}
+
+.resume-document blockquote {
+  margin: 0 0 0.75rem;
+  padding-left: 0.85rem;
+  border-left: 3px solid #ccc;
+}
+
+.resume-document table {
+  font-size: 0.9rem;
+}
+
+.resume-document thead th {
+  border-bottom-width: 2px;
+}
+
+/* Single-column résumé: use full wrapper width beside hidden nav regions */
+.wrapper:has(.resume-document) header,
+.wrapper:has(.resume-document) footer {
+  display: none;
+}
+
+.wrapper:has(.resume-document) section {
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: 1.5rem;
+  border: none;
+  margin: 0;
+}
+
+.wrapper:has(.resume-document) {
+  width: min(56rem, 100%);
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media print {
+  .resume-toolbar {
+    display: none !important;
+  }
+
+  .wrapper:has(.resume-document) header,
+  .wrapper:has(.resume-document) footer {
+    display: none !important;
+  }
+
+  .wrapper:has(.resume-document) section {
+    width: 100% !important;
+    float: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+  }
+
+  .wrapper:has(.resume-document) {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  body {
+    padding: 0 !important;
+    font-size: 10.5pt !important;
+    color: #000 !important;
+    background: #fff !important;
+  }
+
+  .resume-document {
+    max-width: 100%;
+    font-size: 10.5pt;
+    line-height: 1.35;
+    color: #000;
+  }
+
+  .resume-document h1 {
+    font-size: 16pt;
+    border-bottom-color: #000;
+  }
+
+  .resume-document h2 {
+    font-size: 11pt;
+    border-bottom-color: #888;
+    page-break-after: avoid;
+  }
+
+  .resume-document h3 {
+    page-break-after: avoid;
+  }
+
+  .resume-document a {
+    color: #000 !important;
+    text-decoration: underline;
+    text-underline-offset: 1px;
+  }
+}
